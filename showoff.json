@@ -3,7 +3,10 @@
   "description": "A comprehensive introduction to Spring Framework 4 WebSocket and SockJS support",
   "sections": [
     {"section":"overview"},
-    {"section":"example"},
+    {"section":"ws-intro"},
+    {"section":"runtime"},
+    {"section":"spring-api"},
+    {"section":"sockjs"},
     {"section":"end"}
   ]
 }

@@ -1,14 +1,20 @@
 
-!SLIDE small bullets incremental
-# What's Next?
+!SLIDE
+# Example Code
+<br><br>
+[https://github.com/rstoyanchev/spring-websocket-test](https://github.com/rstoyanchev/spring-websocket-test)
 
-* next 1
-* next 2
-* next 3
-* next 4
+!SLIDE small bullets incremental
+# Next?
+
+* WebSocket and SockJS are important foundations
+* We haven't discussed sub-protocols
+* Usage patterns
+* Stay here for the next session
+* "Building WebSocket Browser Applications with Spring"
 
 !SLIDE subsection
-# Questions?
+# Questions
 
 !SLIDE subsection
 # Thank You!
