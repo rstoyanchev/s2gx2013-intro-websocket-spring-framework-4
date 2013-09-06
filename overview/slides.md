@@ -2,8 +2,7 @@
 
 # Intro To WebSocket Applications with Spring Framework 4.0
 <br><br>
-## Rossen Stoyanchev
-### _Senior Staff Engineer, Pivotal_
+## [Rossen Stoyanchev](http://twitter.com/rstoya05)
 
 !SLIDE
 # This presentation
@@ -27,10 +26,10 @@
 \- [RFC 6455](http://www.ietf.org/rfc/rfc2616.txt), <i>The WebSocket Protocol</i>
 
 !SLIDE smaller bullets incremental
-# Sounds promising
+# Sounds promising, for a good reason
 
 !SLIDE smaller bullets incremental
-# there is a lot more than is
+# there is more than is
 # apparent to the eye
 
 !SLIDE smaller bullets incremental
