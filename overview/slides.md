@@ -40,7 +40,7 @@
 # ahead of experience
 
 !SLIDE smaller bullets incremental
-# Expectations
+# False Expectations
 
 * It's standard, it should work
 * It replaces Ajax/Comet [maybe even REST](http://www.infoq.com/news/2012/02/websockets-rest)
@@ -48,11 +48,12 @@
 * I will program to WebSockets
 
 !SLIDE smaller bullets incremental
-# Good To Know
+# Reality Check
 
 * You need IE 10
 * There are issues with proxies
 * Event-driven, messaging architecture
+* Not a replacement for REST
 * Raw WebSocket very low level
 * IT'S A BIG SUBJECT!
 
