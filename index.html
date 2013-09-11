@@ -77,46 +77,48 @@
 </div>
 
 <div id="slides" class="offscreen" style="display:none;">
-<div class="slide" data-transition="none">
-  <div class="content subsection" ref="overview/slides/1">
-<h1>Intro To WebSocket Applications with Spring Framework 4.0</h1>
-
-<br><br>
-
+<div class="slide" data-transition="none"><div class="content subsection" ref="overview/slides/1">
+<h1>Intro to WebSocket with<br>Spring Framework 4.0</br>
 
 <h2><a href="http://twitter.com/rstoya05">Rossen Stoyanchev</a></h2>
-</br>
-</br>
+</h1>
 </div>
 </div><div class="slide" data-transition="none">
-  <div class="content" ref="overview/slides/2">
+  <div class="content small" ref="overview/slides/2">
 <h1>This presentation</h1>
 
 <br><br>
 
 
-<h2><a href="https://github.com/rstoyanchev/s2gx2013-intro-websocket-spring-framework-4">https://github.com/rstoyanchev/s2gx2013-intro-websocket-spring-framework-4</a></h2>
-</br>
-</br>
-</div>
-</div><div class="slide" data-transition="none"><div class="content center" ref="overview/slides/3">
-<h1>So, what are we here</h1>
+<h2><a href="https://github.com/rstoyanchev/s2gx2013-intro-websocket-spring-framework-4">https://github.com/rstoyanchev/</a></h2>
 
-<h1>to talk about?</h1>
-</div>
-</div><div class="slide" data-transition="none"><div class="content center" ref="overview/slides/4">
-<p><img src="./file/overview/html5.png" alt="HTML5 logo"/></p>
+<h2><a href="https://github.com/rstoyanchev/s2gx2013-intro-websocket-spring-framework-4">s2gx2013-intro-websocket-spring-framework-4</a></h2>
+</br>
+</br>
 </div>
 </div><div class="slide" data-transition="none">
-  <div class="content" ref="overview/slides/5">
+  <div class="content small bullets incremental" ref="overview/slides/3">
+<h1>About this talk</h1>
+
+<ul>
+<li>Introduces WebSocket and Spring Framework support</li>
+<li>Separate talk on actually-<br>"Building WebSocket Browser Apps with Spring"</br>
+<li><a href="https://github.com/rstoyanchev/s2gx2013-websocket-browser-apps-with-spring">https://github.com/rstoyanchev/</a><br><a href="https://github.com/rstoyanchev/s2gx2013-websocket-browser-apps-with-spring">s2gx2013-websocket-browser-apps-with-spring</a></br>
+</li>
+
+</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none">
+  <div class="content small" ref="overview/slides/4">
 <h1>WebSocket</h1>
 
 <br>
 
 
-<h2>"mechanism for browser-based applications ...</h2>
+<h2>"mechanism for browser-based applications...</h2>
 
-<h2>two-way communication with servers ...</h2>
+<h2>two-way communication with servers...</h2>
 
 <h2>does not rely on multiple HTTP connections"</h2>
 
@@ -127,47 +129,49 @@
 </br>
 </br>
 </div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="overview/slides/5">
+<p><img src="./file/overview/html5.png" alt="HTML5 logo"/></p>
+</div>
 </div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="overview/slides/6">
-<h1>Sounds promising, for a good reason</h1>
+<h1>Excitement is justified</h1>
+
+<h1>given long history of Ajax/Comet</h1>
 </div>
 </div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="overview/slides/7">
-<h1>there is more than is</h1>
-
-<h1>apparent to the eye</h1>
-</div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="overview/slides/8">
-<h1>It is a popular term by now</h1>
-</div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="overview/slides/9">
-<h1>and has led to expectations</h1>
+<h1>However expectations have come</h1>
 
 <h1>ahead of experience</h1>
 </div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="overview/slides/10">
-<h1>False Expectations</h1>
+</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="overview/slides/8">
+<h1>A Few (False) Expectations</h1>
 
 <ul>
-<li>It's standard, it should work</li>
-<li>It replaces Ajax/Comet <a href="http://www.infoq.com/news/2012/02/websockets-rest">maybe even REST</a></li>
-<li>I know web apps, this can't be too different</li>
-<li>I will program to WebSockets</li>
+<li>It's standard, it's supported everywhere</li>
+<li>It's a replacement for Ajax/Comet (<a href="http://www.infoq.com/news/2012/02/websockets-rest">maybe even REST</a>)</li>
+<li>I know web apps, how different can this be?</li>
+<li>I will program to a WebSocket API</li>
 </ul>
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="overview/slides/11">
+</div><div class="slide" data-transition="none">
+  <div class="content smaller bullets incremental" ref="overview/slides/9">
 <h1>Reality Check</h1>
 
+<br><br>
+
+
 <ul>
-<li>You need IE 10</li>
+<li>Not supported in IE &lt; 10</li>
 <li>There are issues with proxies</li>
-<li>Event-driven, messaging architecture</li>
 <li>Not a replacement for REST</li>
-<li>Raw WebSocket very low level</li>
-<li>IT'S A BIG SUBJECT!</li>
+<li>A socket is very low level to work on</li>
+<li>Event-driven, messaging architecture</li>
 </ul>
 
+</br>
+</br>
 </div>
-</div><div class="slide" data-transition="none"><div class="content center" ref="overview/slides/12">
+</div><div class="slide" data-transition="none"><div class="content center" ref="overview/slides/10">
 <h1>WebSockets</h1>
 
 <p><em>"Toto, I've a feeling we're not in REST land any more"</em></p>
@@ -178,10 +182,14 @@
 <p><img src="./file/overview/WizardYellowBrick.jpg" alt="Wizard of Oz"/></p>
 </br>
 </div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="overview/slides/13">
+</div><div class="slide" data-transition="none">
+  <div class="content smaller bullets incremental" ref="overview/slides/11">
 <h1>Last year's talk</h1>
 
-<h2><a href="http://www.youtube.com/watch?v=z-CYO1ABCp4">On YouTube</a></h2>
+<h2><a href="http://www.youtube.com/watch?v=z-CYO1ABCp4">Available on YouTube</a></h2>
+
+<br><br><br>
+
 
 <ul>
 <li>Broad, pragmatic introduction</li>
@@ -189,31 +197,39 @@
 <li>Some key (open-ended) questions defined</li>
 </ul>
 
-</div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="overview/slides/14">
+</br>
+</br>
+</br></div>
+</div><div class="slide" data-transition="none">
+  <div class="content smaller bullets incremental" ref="overview/slides/12">
 <h1>Key Takeaways from Last Year</h1>
+
+<br><br>
+
 
 <ul>
 <li>The need for fallback options will persist</li>
-<li>Integrating into a real app not yet trivial</li>
-<li>"Pure" WebSocket applications in the wild unlikely</li>
+<li>Integrating into a real application not yet trivial</li>
+<li>"Pure" WebSocket apps in the wild unlikely</li>
 <li>Questions remain around usage patterns</li>
 </ul>
 
+</br>
+</br>
 </div>
-</div><div class="slide" data-transition="none"><div class="content center" ref="ws-intro/slides/1">
+</div><div class="slide" data-transition="none">
+  <div class="content center small" ref="ws-intro/slides/1">
 <h1>A Quick Definition</h1>
 
-<h1>of WebSocket</h1>
-
-<br>
+<br><br>
 
 
 <p><img src="./file/ws-intro/websocket-definition.png" alt="Image of Google search for WebSocket"/></p>
 </br>
+</br>
 </div>
 </div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="ws-intro/slides/2">
-<h1>WebSocket Defined</h1>
+<h1>What is WebSocket?</h1>
 
 <ul>
 <li>A layer on TCP</li>
@@ -247,10 +263,10 @@ Sec-WebSocket-Protocol: chat
 </code></pre>
 </div>
 </div><div class="slide" data-transition="none"><div class="content center small" ref="ws-intro/slides/5">
-<h1>then start exchanging messages...</h1>
+<h1>then exchange messages on the socket...</h1>
 </div>
 </div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="ws-intro/slides/6">
-<h1>Lifecycle Events</h1>
+<h1>Typical API Lifecycle Events</h1>
 
 <ul>
 <li><code>open</code> - session established</li>
@@ -264,38 +280,49 @@ Sec-WebSocket-Protocol: chat
 </div><div class="slide" data-transition="none"><div class="content smaller" ref="ws-intro/slides/7">
 <h1>WebSocket Frame</h1>
 
-<pre><code>     0                   1                   2                   3
-     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
-    +-+-+-+-+-------+-+-------------+-------------------------------+
-    |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
-    |I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
-    |N|V|V|V|       |S|             |   (if payload len==126/127)   |
-    | |1|2|3|       |K|             |                               |
-    +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
-    |     Extended payload length continued, if payload len == 127  |
-    + - - - - - - - - - - - - - - - +-------------------------------+
-    |                               |Masking-key, if MASK set to 1  |
-    +-------------------------------+-------------------------------+
-    | Masking-key (continued)       |          Payload Data         |
-    +-------------------------------- - - - - - - - - - - - - - - - +
-    :                     Payload Data continued ...                :
-    + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-    |                     Payload Data continued ...                |
-    +---------------------------------------------------------------+
+<pre><code> 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-------+-+-------------+-------------------------------+
+|F|R|R|R| opcode|M| Payload len |    Extended payload length    |
+|I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
+|N|V|V|V|       |S|             |   (if payload len==126/127)   |
+| |1|2|3|       |K|             |                               |
++-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
+|     Extended payload length continued, if payload len == 127  |
++ - - - - - - - - - - - - - - - +-------------------------------+
+|                               |Masking-key, if MASK set to 1  |
++-------------------------------+-------------------------------+
+| Masking-key (continued)       |          Payload Data         |
++-------------------------------- - - - - - - - - - - - - - - - +
+:                     Payload Data continued ...                :
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                     Payload Data continued ...                |
++---------------------------------------------------------------+
 </code></pre>
 </div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="ws-intro/slides/8">
+</div><div class="slide" data-transition="none">
+  <div class="content smaller bullets incremental" ref="ws-intro/slides/8">
 <h1>What kind of payload?</h1>
 
+<br><br>
+
+
 <ul>
-<li>Text and binary messages</li>
-<li>Control frames -- close, ping, pong</li>
-<li>Continuation frame (fragmented message)</li>
+<li>Text messages encoded as UTF-8</li>
+<li>Binary messages</li>
+<li>Control frames: close, ping, pong</li>
+<li>Continuation frames</li>
 </ul>
 
+</br>
+</br>
 </div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="ws-intro/slides/9">
+</div><div class="slide" data-transition="none">
+  <div class="content smaller bullets incremental" ref="ws-intro/slides/9">
 <h1>Message vs Frame</h1>
+
+<br><br>
+
 
 <ul>
 <li>A message can be broken into fragments</li>
@@ -304,128 +331,184 @@ Sec-WebSocket-Protocol: chat
 <li>Good to know if tracing TCP traffic</li>
 </ul>
 
+</br>
+</br>
 </div>
 </div><div class="slide" data-transition="none"><div class="content subsection" ref="runtime/slides/1">
 <h1>Runtime Support</h1>
 </div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="runtime/slides/2">
-<h1>Java API for WebSocket</h1>
+</div><div class="slide" data-transition="none">
+  <div class="content smaller bullets incremental" ref="runtime/slides/2">
+<h1>The Java API for WebSocket</h1>
+
+<br><br>
+
 
 <ul>
-<li>Several containers pre-date JSR-356</li>
+<li>Several Servlet containers pre-date JSR-356</li>
 <li>Jetty 7/8, Tomcat 7, GlassFish 3.x</li>
-<li>Much debate on the JSR-356 EG</li>
-<li>And all-new WebSocket implementations</li>
+<li>Much debate on JSR-356 EG</li>
+<li>All-new WebSocket implementations</li>
 </ul>
 
+</br>
+</br>
 </div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="runtime/slides/3">
-<h1>Relationshipt to Servlet Spec</h1>
+</div><div class="slide" data-transition="none">
+  <div class="content smaller bullets incremental" ref="runtime/slides/3">
+<h1>Relationship to Servlet Spec</h1>
+
+<br><br>
+
 
 <ul>
-<li>JSR-356 has no dependency on Servlets</li>
-<li>Still, built for and by Servlet containers</li>
-<li>Servlet 3.1 provides the upgrade hook WebSocket engines need</li>
-<li><code>HttpServletRequest.upgrade(Class&lt;?&gt;)</code></li>
-</ul>
+<li>JSR-356 has no dependency on Servlet spec</li>
+<li>Nevertheless built for and by Servlet containers</li>
+<li>Servlet 3.1 provides a hook for upgrading:<br><code>HttpServletRequest.upgrade(Class&lt;?&gt;)</code></br>
+<li>SCI scan used also in Servlet containers</li>
+</li>
 
-</div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="runtime/slides/4">
-<h1>Container Versions</h1>
+</ul>
+</br>
+</br></div>
+</div><div class="slide" data-transition="none">
+  <div class="content smaller bullets incremental" ref="runtime/slides/4">
+<h1>Servlet Container Versions</h1>
 
 <ul>
-<li>Tomcat 8 + backport to Tomcat 7</li>
-<li>Jetty 9 native API, <code>JSR-356</code> on top in Jetty 9.1</li>
-<li>Glassfish 4</li>
-<li>All complete re-writes based on JSR-356</li>
-</ul>
+<li>Tomcat 8 (currently RC1)-<br>expect RC2 soon and also backport to Tomcat 7</br>
+<li>Jetty 9 already has native WebSocket API-<br>Jetty 9.1 will add <code>JSR-356</code></br>
+<li>Glassfish 4 with Tyrus WebSocket engine</li>
+<li>More containers to follow</li>
+</li>
 
+</li>
+</ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="runtime/slides/5">
-<h1>JSR-356 API Details</h1>
+</div><div class="slide" data-transition="none">
+  <div class="content smaller bullets incremental" ref="runtime/slides/5">
+<h1>The JSR-356 API</h1>
+
+<br><br>
+
 
 <ul>
 <li>Two main options</li>
 <li>Extend abstract class <code>Endpoint</code>, or</li>
-<li>Use annotations <code>@ServerEndpoint</code>, <code>@ClientEndpoint</code></li>
-</ul>
+<li>Use annotated endpoints via<br> <code>@ServerEndpoint</code>, <code>@ClientEndpoint</code></br>
+</li>
 
-</div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="runtime/slides/6">
-<h1>JSR-356 Server-Side Deployment</h1>
+</ul>
+</br>
+</br></div>
+</div><div class="slide" data-transition="none">
+  <div class="content smaller bullets incremental" ref="runtime/slides/6">
+<h1>Server-Side Deployment</h1>
+
+<h2><em>(JSR-356)</em></h2>
+
+<br><br>
+
 
 <ul>
-<li>Two main options</li>
-<li>Servlet container scans for annotated endpoints</li>
-<li>Programmatically deploy endpoints at startup via <code>WebSocketContainer</code></li>
-</ul>
+<li>Also two main options</li>
+<li>Servlet container scan for annotated endpoints</li>
+<li>Programmatic deployment at startup<br> via <code>WebSocketContainer</code></br>
+</li>
 
-</div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="runtime/slides/7">
-<h1>Spring Container Support for JSR-356</h1>
+</ul>
+</br>
+</br></div>
+</div><div class="slide" data-transition="none">
+  <div class="content smaller bullets incremental" ref="runtime/slides/7">
+<h1>JSR-356 in Spring Apps</h1>
+
+<br><br>
+
 
 <ul>
-<li>Initialize endpoints through Spring container</li>
-<li><code>ServerEndpointExporter</code> for <code>ServerEndpointRegistration</code> beans</li>
-<li><code>SpringConfigurator.class</code> for use with <code>@ServerEndpoint</code></li>
-<li>See Javadoc on respective classes</li>
-</ul>
+<li>Create endpoints through Spring container</li>
+<li><a href="http://docs.spring.io/spring/docs/4.0.0.BUILD-SNAPSHOT/javadoc-api/org/springframework/web/socket/server/endpoint/ServerEndpointExporter.html"><code>ServerEndpointExporter</code></a> deploys beans of type<br><a href="http://docs.spring.io/spring/docs/4.0.0.BUILD-SNAPSHOT/javadoc-api/org/springframework/web/socket/server/endpoint/ServerEndpointExporter.html"><code>ServerEndpointRegistration</code></a></br>
+<li><a href="http://docs.spring.io/spring/docs/4.0.0.BUILD-SNAPSHOT/javadoc-api/org/springframework/web/socket/server/endpoint/SpringConfigurator.html"><code>SpringConfigurator</code></a> can be referenced<br>via <code>@ServerEndpoint</code> attribute</br>
+<li>Check Javadoc of these classes</li>
+</li>
 
-</div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="runtime/slides/8">
+</li>
+</ul>
+</br></br></div>
+</div><div class="slide" data-transition="none">
+  <div class="content smaller bullets incremental" ref="runtime/slides/8">
 <h1>JSR-356 Limitations</h1>
 
 <ul>
-<li>No fallback options means no IE</li>
-<li>No sub-protocol support means hard to build real apps</li>
-<li>Can't consolidate HTTP and WebSocket request handling</li>
-<li>Built more for applications than as server foundation</li>
-</ul>
+<li>No fallback options (no IE)</li>
+<li>No sub-protocol support, hard to build real apps</li>
+<li>No way to <a href="https://java.net/jira/browse/WEBSOCKET_SPEC-211">handle HTTP and WebSocket requests</a><br>from one place (i.e. "front controller" pattern)</br>
+<li>Resembles application framework<br>rather than remain flexible for frameworks to build on</br>
+</li>
 
+</li>
+</ul>
 </div>
 </div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="runtime/slides/9">
-<h1>Why Sub-Protocol Support Matters</h1>
+<h1>Why Frameworks Matter?</h1>
 
 <ul>
-<li>Apps should aim to keep one socket per client</li>
-<li>One "main" pipeline for various messages</li>
-<li>Leads to 1 @ServerEndpoint per application</li>
-<li>Ideally class boundaries should be around functionality</li>
+<li>If you maintain one WebSocket per client</li>
+<li>i.e. one pipeline for all messages</li>
+<li>You end up with single <code>@ServerEndpoint</code> per application</li>
+<li>This is too rudimentary</li>
+<li>Much like Servlet vs Web framework</li>
 </ul>
 
 </div>
 </div><div class="slide" data-transition="none"><div class="content center" ref="runtime/slides/10">
 <p>"Using annotations and things is clearly in the vein of Spring and Hibernate and other popular Java libraries. When trying to build on top of it, though, I find myself wishing for an API more like Jetty 8, where I can just implement some interfaces and build my own abstractions on top of WebSocket."</p>
 
-<p><a href="http://dev.eclipse.org/mhonarc/lists/jetty-users/msg03689.html">Comment</a> on jetty-users list</p>
+<p><a href="http://dev.eclipse.org/mhonarc/lists/jetty-users/msg03689.html">Comment</a> on jetty-users mailing list</p>
 </div>
 </div><div class="slide" data-transition="none"><div class="content subsection" ref="spring-api/slides/1">
 <h1>Spring WebSocket API</h1>
 </div>
-</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="spring-api/slides/2">
-<h1>Spring WebSocket API</h1>
+</div><div class="slide" data-transition="none">
+  <div class="content smaller bullets incremental" ref="spring-api/slides/2">
+<h1>Spring's own WebSocket API</h1>
+
+<br><br>
+
 
 <ul>
-<li>Abstraction for WebSocket runtimes</li>
+<li>Abstraction over WebSocket runtimes</li>
 <li>Including JSR-356 containers</li>
-<li>But not only - e.g. Jetty 9 API, Netty, etc</li>
-<li>SockJS fallback options</li>
-<li>New <code>spring-websocket</code> dependency</li>
-</ul>
+<li>But not limited to it-<br>Jetty 9 native API, Netty (experimental)</br>
+<li>Supports transparent fallback options<br>based on SockJS protocol</br>
+<li>New <code>spring-websocket</code> module</li>
+</li>
 
-</div>
-</div><div class="slide" data-transition="none"><div class="content smaller" ref="spring-api/slides/3">
+</li>
+</ul>
+</br></br></div>
+</div><div class="slide" data-transition="none">
+  <div class="content smaller" ref="spring-api/slides/3">
 <h1>Example</h1>
+
+<br><br>
+
 
 <pre class="sh_java"><code>
 public class EchoHandler extends TextWebSocketHandlerAdapter {
 
+
   @Override
-  public void handleTextMessage(WebSocketSession sess, TextMessage msg) {
-    sess.sendMessage(msg);
+  public void handleTextMessage(WebSocketSession session,
+      TextMessage message) throws Exception {
+
+    session.sendMessage(message);
   }
 
 }</code></pre>
+</br>
+</br>
 </div>
 </div><div class="slide" data-transition="none"><div class="content smaller" ref="spring-api/slides/4">
 <h1>Java config</h1>
@@ -435,9 +518,12 @@ public class EchoHandler extends TextWebSocketHandlerAdapter {
 @EnableWebSocket
 public class WebSocketConfig implements WebSocketConfigurer {
 
+
   @Override
-  public void registerWebSocketHandlers(WebSocketHandlerRegistry reg) {
-    reg.addHandler(new EchoHandler(), "/echo");
+  public void registerWebSocketHandlers(
+      WebSocketHandlerRegistry registry) {
+
+    registry.addHandler(new EchoHandler(), "/echo");
   }
 
 }</code></pre>
@@ -446,13 +532,13 @@ public class WebSocketConfig implements WebSocketConfigurer {
 <h1><code>HandshakeInterceptor</code></h1>
 
 <ul>
-<li>Before/after handshake</li>
-<li>Access to HTTP request &amp; response</li>
-<li>Ability to preclude handshake</li>
+<li>Access to HTTP request &amp; response<br>before and after handshake</br>
+<li>Can preclude handshake</li>
 <li>Can pass "handshake" attributes to <code>WebSocketSession</code></li>
-<li>See <code>HttpSessionHandshakeInterceptor</code></li>
-</ul>
+<li>Example <code>HttpSessionHandshakeInterceptor</code></li>
+</li>
 
+</ul>
 </div>
 </div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="spring-api/slides/6">
 <h1><code>WebSocketHandlerDecorator</code></h1>
@@ -461,7 +547,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
 <li>Transparent decoration</li>
 <li><code>ExceptionWebSocketHandlerDecorator</code></li>
 <li><code>LoggingWebSocketHandlerDecorator</code></li>
-<li>Automatically applied</li>
+<li>The above applied by default</li>
 </ul>
 
 </div>
@@ -473,34 +559,38 @@ public class WebSocketConfig implements WebSocketConfigurer {
 @EnableWebSocket
 public class WebSocketConfig implements WebSocketConfigurer {
 
+
   // ...
+
 
   @Bean
   public WebSocketHandler snakeHandler() {
-    return new PerConnectionWebSocketHandler(SnakeWebSocketHandler.class);
+    Class&lt;?&gt; clazz = SnakeWebSocketHandler.class;
+    return new PerConnectionWebSocketHandler(clazz);
   }
 
 }</code></pre>
 </div>
-</div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="spring-api/slides/8">
+</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="spring-api/slides/8">
 <h1>Note on URL Mapping</h1>
 
 <ul>
-<li>Spring doesn't use JSR-356 deployment</li>
-<li>Free to map <code>WebSocketHandler</code> via Spring MVC or other</li>
+<li>Spring does not use JSR-356 deployment mechanism</li>
+<li>Enables mapping <code>WebSocketHandler</code> in Spring MVC</li>
 <li>Requires container-specific <code>RequestUpgradeStrategy</code></li>
-<li>Currently supported: Tomcat, Jetty, Glassfish</li>
-<li>See <a href="https://java.net/jira/browse/WEBSOCKET_SPEC-211">WEBSOCKET_SPEC-211</a> (vote please)</li>
+<li>Currently supported are Tomcat, Jetty, Glassfish</li>
+<li><a href="https://java.net/jira/browse/WEBSOCKET_SPEC-211">WEBSOCKET_SPEC-211</a> (exercise vote)</li>
 </ul>
 
 </div>
 </div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="spring-api/slides/9">
-<h1>The Client-Side</h1>
+<h1>Client-Side API</h1>
 
 <ul>
 <li>Programmatic handshake via <code>WebSocketClient</code></li>
-<li>Also declarative style that can auto-start</li>
-<li>Via <code>ConnectionManagerSupport</code> and sub-classeses</li>
+<li>Returns <code>ListenableFuture&lt;WebSocketSession&gt;</code></li>
+<li>Also available is declarative style (can auto-start)</li>
+<li><code>ConnectionManagerSupport</code> and sub-classeses</li>
 </ul>
 
 </div>
@@ -530,8 +620,12 @@ static class ClientConfig {
 </div><div class="slide" data-transition="none"><div class="content subsection" ref="sockjs/slides/1">
 <h1>SockJS Support</h1>
 </div>
-</div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="sockjs/slides/2">
-<h1><a href="https://github.com/sockjs/sockjs-client">Philosophy</a></h1>
+</div><div class="slide" data-transition="none">
+  <div class="content small bullets incremental" ref="sockjs/slides/2">
+<h1><a href="https://github.com/sockjs/sockjs-client">SockJS</a> in a Nutshell</h1>
+
+<br><br>
+
 
 <ul>
 <li>Emulate WebSocket API as close as possible</li>
@@ -541,6 +635,8 @@ static class ClientConfig {
 <li>No Flash inside</li>
 </ul>
 
+</br>
+</br>
 </div>
 </div><div class="slide" data-transition="none"><div class="content center" ref="sockjs/slides/3">
 <h2>SockJS Transports by Browser</h2>
@@ -548,16 +644,20 @@ static class ClientConfig {
 <p><img src="./file/sockjs/transports.png" alt="Table with SockJS transports by browser"/></p>
 </div>
 </div><div class="slide" data-transition="none"><div class="content smaller" ref="sockjs/slides/4">
-<h1>Enable SockJS in Spring</h1>
+<h1>Configure SockJS</h1>
 
 <pre class="sh_java"><code>
 @Configuration
 @EnableWebSocket
 public class WebSocketConfig implements WebSocketConfigurer {
 
+
   @Override
-  public void registerWebSocketHandlers(WebSocketHandlerRegistry reg) {
-    reg.addHandler(new EchoHandler(), "/echo").withSockJS();
+  public void registerWebSocketHandlers(
+      WebSocketHandlerRegistry registry) {
+
+    WebSocketHandler echoHandler = new EchoHandler();
+    registry.addHandler(echoHandler, "/echo").withSockJS();
   }
 
 }</code></pre>
@@ -565,14 +665,16 @@ public class WebSocketConfig implements WebSocketConfigurer {
 </div><div class="slide" data-transition="none"><div class="content smaller" ref="sockjs/slides/5">
 <h1><code>WebSocketHandler</code></h1>
 
-<h2>(same as before)</h2>
+<h2>(remains unchanged)</h2>
 
 <pre class="sh_java"><code>
 public class EchoHandler extends TextWebSocketHandlerAdapter {
 
   @Override
-  public void handleTextMessage(WebSocketSession sess, TextMessage msg) {
-    sess.sendMessage(msg);
+  public void handleTextMessage(WebSocketSession session,
+      TextMessage message) throws Exception {
+
+    session.sendMessage(message);
   }
 
 }</code></pre>
@@ -583,11 +685,17 @@ public class EchoHandler extends TextWebSocketHandlerAdapter {
 <pre class="sh_javascript"><code>
   var ws = new SockJS("ws://localhost:8080/echo");
 
-  ws.onopen = function (event) { };
+  ws.onopen = function (event) {
+    // ...
+  };
 
-  ws.onmessage = function (event) { };
+  ws.onmessage = function (event) {
+    // ...
+  };
 
-  ws.onclose = function (event) { };</code></pre>
+  ws.onclose = function (event) {
+    // ...
+  };</code></pre>
 </div>
 </div><div class="slide" data-transition="none"><div class="content center" ref="sockjs/slides/7">
 <p><img src="./file/sockjs/sockjs-demo.png" alt="Chrome browser with SockJS network activity"/></p>
@@ -602,8 +710,12 @@ public class EchoHandler extends TextWebSocketHandlerAdapter {
 </ul>
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="sockjs/slides/9">
-<h1>SockJS URL Scheme</h1>
+</div><div class="slide" data-transition="none">
+  <div class="content small bullets incremental" ref="sockjs/slides/9">
+<h1>The SockJS URL Scheme</h1>
+
+<br><br><br>
+
 
 <pre><code>    GET  /echo
 
@@ -611,40 +723,48 @@ public class EchoHandler extends TextWebSocketHandlerAdapter {
 
     POST /echo/&lt;server&gt;/&lt;session&gt;/&lt;transport&gt;
 </code></pre>
-</div>
-</div><div class="slide" data-transition="none"><div class="content small" ref="sockjs/slides/10">
-<h1>SockJS Requests</h1>
+</br>
+</br>
+</br></div>
+</div><div class="slide" data-transition="none">
+  <div class="content small" ref="sockjs/slides/10">
+<h1>Example SockJS Requests</h1>
 
-<pre><code>GET /echo/info
+<br><br><br>
 
-POST /echo/375/5rzpg08l/xhr_streaming  # server-to-client
 
-POST /echo/375/5rzpg08l/xhr_send  # client-to-server
+<pre><code>    GET /echo/info
 
-POST /echo/375/5rzpg08l/xhr_send  # client-to-server
+    POST /echo/375/5rzpg08l/xhr_streaming
+
+    POST /echo/375/5rzpg08l/xhr_send
+    POST /echo/375/5rzpg08l/xhr_send
 </code></pre>
-</div>
+</br>
+</br>
+</br></div>
 </div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="sockjs/slides/11">
-<h1>Where Does It Work?</h1>
+<h1>Runtime Support</h1>
 
 <ul>
 <li>Any Servlet 3.0 container</li>
-<li>Even if server doesn't have WebSocket yet!</li>
-<li>No hard dependency on Servlet API though</li>
+<li>Even without WebSocket support!</li>
+<li>No hard dependency on Servlet API</li>
 <li>Experimental Netty support</li>
 </ul>
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="sockjs/slides/12">
+</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="sockjs/slides/12">
 <h1>Client Disconnects</h1>
 
 <ul>
 <li>Servlet 3 containers don't detect clients going away</li>
 <li><code>SockJsService</code> however sends periodic heartbeats</li>
 <li>A failure to send a message closes the session</li>
-<li>See <a href="http://markmail.org/message/yhsslizqedcpg4zp">related discussion</a></li>
-</ul>
+<li>Check <a href="https://java.net/jira/browse/SERVLET_SPEC-44">SERVLET_SPEC-44</a> (vote please)<br> and also <a href="http://markmail.org/message/yhsslizqedcpg4zp">related discussion</a></br>
+</li>
 
+</ul>
 </div>
 </div><div class="slide" data-transition="none">
   <div class="content" ref="end/slides/1">
@@ -653,27 +773,30 @@ POST /echo/375/5rzpg08l/xhr_send  # client-to-server
 <br><br>
 
 
-<p><a href="https://github.com/rstoyanchev/spring-websocket-test">https://github.com/rstoyanchev/spring-websocket-test</a></p>
+<h2><a href="https://github.com/rstoyanchev/spring-websocket-test">https://github.com/rstoyanchev/</a></h2>
+
+<h2><a href="https://github.com/rstoyanchev/spring-websocket-test">spring-websocket-test</a></h2>
 </br>
 </br>
 </div>
-</div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="end/slides/2">
-<h1>Next?</h1>
+</div><div class="slide" data-transition="none">
+  <div class="content small bullets incremental" ref="end/slides/2">
+<br><br>
+
+
+<h1>Beyond "Hello World"</h1>
 
 <ul>
 <li>WebSocket and SockJS are important foundations</li>
-<li>We haven't discussed sub-protocols</li>
-<li>Usage patterns</li>
-<li>Stay here for the next session</li>
-<li>"Building WebSocket Browser Applications with Spring"</li>
-</ul>
+<li>We haven't discussed usage patterns</li>
+<li>Come to my next session:<br><a href="https://springone2gx.com/conference/santa_clara/2013/09/session?id=29461">"Building WebSocket Browser Apps with Spring"</a></br>
+</li>
 
-</div>
-</div><div class="slide" data-transition="none"><div class="content subsection" ref="end/slides/3">
-<h1>Questions</h1>
-</div>
+</ul>
+</br>
+</br></div>
 </div><div class="slide" data-transition="none">
-  <div class="content subsection" ref="end/slides/4">
+  <div class="content subsection" ref="end/slides/3">
 <h1>Thank You!</h1>
 
 <br><br>
