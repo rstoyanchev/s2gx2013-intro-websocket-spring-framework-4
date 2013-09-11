@@ -2,24 +2,27 @@
 # Spring WebSocket API
 
 !SLIDE smaller bullets incremental
-# Spring WebSocket API
-
-* Abstraction for WebSocket runtimes
+# Spring's own WebSocket API
+<br><br>
+* Abstraction over WebSocket runtimes
 * Including JSR-356 containers
-* But not only - e.g. Jetty 9 API, Netty, etc
-* SockJS fallback options
-* New `spring-websocket` dependency
+* But not limited to it-<br>Jetty 9 native API, Netty (experimental)
+* Supports transparent fallback options<br>based on SockJS protocol
+* New `spring-websocket` module
 
 !SLIDE smaller
 # Example
-
+<br><br>
     @@@ java
 
     public class EchoHandler extends TextWebSocketHandlerAdapter {
 
+
       @Override
-      public void handleTextMessage(WebSocketSession sess, TextMessage msg) {
-        sess.sendMessage(msg);
+      public void handleTextMessage(WebSocketSession session,
+          TextMessage message) throws Exception {
+
+        session.sendMessage(message);
       }
 
     }
@@ -33,9 +36,12 @@
     @EnableWebSocket
     public class WebSocketConfig implements WebSocketConfigurer {
 
+
       @Override
-      public void registerWebSocketHandlers(WebSocketHandlerRegistry reg) {
-        reg.addHandler(new EchoHandler(), "/echo");
+      public void registerWebSocketHandlers(
+          WebSocketHandlerRegistry registry) {
+
+        registry.addHandler(new EchoHandler(), "/echo");
       }
 
     }
@@ -43,11 +49,10 @@
 !SLIDE small bullets incremental
 # `HandshakeInterceptor`
 
-* Before/after handshake
-* Access to HTTP request & response
-* Ability to preclude handshake
+* Access to HTTP request & response<br>before and after handshake
+* Can preclude handshake
 * Can pass "handshake" attributes to `WebSocketSession`
-* See `HttpSessionHandshakeInterceptor`
+* Example `HttpSessionHandshakeInterceptor`
 
 !SLIDE small bullets incremental
 # `WebSocketHandlerDecorator`
@@ -55,7 +60,7 @@
 * Transparent decoration
 * `ExceptionWebSocketHandlerDecorator`
 * `LoggingWebSocketHandlerDecorator`
-* Automatically applied
+* The above applied by default
 
 !SLIDE smaller
 # `PerConnectionWebSocketHandler`
@@ -66,30 +71,34 @@
     @EnableWebSocket
     public class WebSocketConfig implements WebSocketConfigurer {
 
+
       // ...
+
 
       @Bean
       public WebSocketHandler snakeHandler() {
-        return new PerConnectionWebSocketHandler(SnakeWebSocketHandler.class);
+        Class<?> clazz = SnakeWebSocketHandler.class;
+        return new PerConnectionWebSocketHandler(clazz);
       }
 
     }
 
-!SLIDE small bullets incremental
+!SLIDE smaller bullets incremental
 # Note on URL Mapping
 
-* Spring doesn't use JSR-356 deployment
-* Free to map `WebSocketHandler` via Spring MVC or other
+* Spring does not use JSR-356 deployment mechanism
+* Enables mapping `WebSocketHandler` in Spring MVC
 * Requires container-specific `RequestUpgradeStrategy`
-* Currently supported: Tomcat, Jetty, Glassfish
-* See [WEBSOCKET_SPEC-211](https://java.net/jira/browse/WEBSOCKET_SPEC-211) (vote please)
+* Currently supported are Tomcat, Jetty, Glassfish
+* [WEBSOCKET_SPEC-211](https://java.net/jira/browse/WEBSOCKET_SPEC-211) (exercise vote)
 
 !SLIDE small bullets incremental
-# The Client-Side
+# Client-Side API
 
 * Programmatic handshake via `WebSocketClient`
-* Also declarative style that can auto-start
-* Via `ConnectionManagerSupport` and sub-classeses
+* Returns `ListenableFuture<WebSocketSession>`
+* Also available is declarative style (can auto-start)
+* `ConnectionManagerSupport` and sub-classeses
 
 !SLIDE smaller
 # Example

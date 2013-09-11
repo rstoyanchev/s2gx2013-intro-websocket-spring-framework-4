@@ -2,8 +2,8 @@
 # SockJS Support
 
 !SLIDE small bullets incremental
-# [Philosophy](https://github.com/sockjs/sockjs-client)
-
+# [SockJS](https://github.com/sockjs/sockjs-client) in a Nutshell
+<br><br>
 * Emulate WebSocket API as close as possible
 * At least one streaming protocol per major browser
 * Cross-domain and cookie support
@@ -16,7 +16,7 @@
 ![Table with SockJS transports by browser](transports.png)
 
 !SLIDE smaller
-# Enable SockJS in Spring
+# Configure SockJS
 
     @@@ java
 
@@ -24,24 +24,30 @@
     @EnableWebSocket
     public class WebSocketConfig implements WebSocketConfigurer {
 
+
       @Override
-      public void registerWebSocketHandlers(WebSocketHandlerRegistry reg) {
-        reg.addHandler(new EchoHandler(), "/echo").withSockJS();
+      public void registerWebSocketHandlers(
+          WebSocketHandlerRegistry registry) {
+
+        WebSocketHandler echoHandler = new EchoHandler();
+        registry.addHandler(echoHandler, "/echo").withSockJS();
       }
 
     }
 
 !SLIDE smaller
 # `WebSocketHandler`
-## (same as before)
+## (remains unchanged)
 
     @@@ java
 
     public class EchoHandler extends TextWebSocketHandlerAdapter {
 
       @Override
-      public void handleTextMessage(WebSocketSession sess, TextMessage msg) {
-        sess.sendMessage(msg);
+      public void handleTextMessage(WebSocketSession session,
+          TextMessage message) throws Exception {
+
+        session.sendMessage(message);
       }
 
     }
@@ -53,11 +59,17 @@
 
       var ws = new SockJS("ws://localhost:8080/echo");
 
-      ws.onopen = function (event) { };
+      ws.onopen = function (event) {
+        // ...
+      };
 
-      ws.onmessage = function (event) { };
+      ws.onmessage = function (event) {
+        // ...
+      };
 
-      ws.onclose = function (event) { };
+      ws.onclose = function (event) {
+        // ...
+      };
 
 !SLIDE center
 ![Chrome browser with SockJS network activity](sockjs-demo.png)
@@ -70,8 +82,8 @@
 * [Wide support](https://github.com/sockjs/sockjs-client) across languages
 
 !SLIDE small bullets incremental
-# SockJS URL Scheme
-
+# The SockJS URL Scheme
+<br><br><br>
         GET  /echo
 
         GET  /echo/info
@@ -79,30 +91,30 @@
         POST /echo/<server>/<session>/<transport>
 
 !SLIDE small
-# SockJS Requests
+# Example SockJS Requests
+<br><br><br>
 
-    GET /echo/info
+        GET /echo/info
 
-    POST /echo/375/5rzpg08l/xhr_streaming  # server-to-client
+        POST /echo/375/5rzpg08l/xhr_streaming
 
-    POST /echo/375/5rzpg08l/xhr_send  # client-to-server
-
-    POST /echo/375/5rzpg08l/xhr_send  # client-to-server
+        POST /echo/375/5rzpg08l/xhr_send
+        POST /echo/375/5rzpg08l/xhr_send
 
 !SLIDE small bullets incremental
-# Where Does It Work?
+# Runtime Support
 
 * Any Servlet 3.0 container
-* Even if server doesn't have WebSocket yet!
-* No hard dependency on Servlet API though
+* Even without WebSocket support!
+* No hard dependency on Servlet API
 * Experimental Netty support
 
-!SLIDE small bullets incremental
+!SLIDE smaller bullets incremental
 # Client Disconnects
 
 * Servlet 3 containers don't detect clients going away
 * `SockJsService` however sends periodic heartbeats
-* A failure to send a message closes the session 
-* See [related discussion](http://markmail.org/message/yhsslizqedcpg4zp)
+* A failure to send a message closes the session
+* Check [SERVLET_SPEC-44](https://java.net/jira/browse/SERVLET_SPEC-44) (vote please)<br> and also [related discussion](http://markmail.org/message/yhsslizqedcpg4zp)
 
 

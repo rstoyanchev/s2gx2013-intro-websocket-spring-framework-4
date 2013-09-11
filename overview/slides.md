@@ -1,61 +1,57 @@
 !SLIDE subsection
 
-# Intro To WebSocket Applications with Spring Framework 4.0
-<br><br>
+# Intro to WebSocket with<br>Spring Framework 4.0
 ## [Rossen Stoyanchev](http://twitter.com/rstoya05)
 
-!SLIDE
+!SLIDE small
 # This presentation
 <br><br>
-## [https://github.com/rstoyanchev/s2gx2013-intro-websocket-spring-framework-4](https://github.com/rstoyanchev/s2gx2013-intro-websocket-spring-framework-4)
+## [https://github.com/rstoyanchev/](https://github.com/rstoyanchev/s2gx2013-intro-websocket-spring-framework-4)
+## [s2gx2013-intro-websocket-spring-framework-4](https://github.com/rstoyanchev/s2gx2013-intro-websocket-spring-framework-4)
 
-!SLIDE center
-# So, what are we here 
-# to talk about?
+!SLIDE small bullets incremental
+# About this talk
 
-!SLIDE center
-![HTML5 logo](html5.png)
+* Introduces WebSocket and Spring Framework support
+* Separate talk on actually-<br>"Building WebSocket Browser Apps with Spring"
+* [https://github.com/rstoyanchev/](https://github.com/rstoyanchev/s2gx2013-websocket-browser-apps-with-spring)<br>[s2gx2013-websocket-browser-apps-with-spring](https://github.com/rstoyanchev/s2gx2013-websocket-browser-apps-with-spring)
 
-!SLIDE
+!SLIDE small
 # WebSocket
 <br>
-## "mechanism for browser-based applications ...
-## two-way communication with servers ...
+## "mechanism for browser-based applications...
+## two-way communication with servers...
 ## does not rely on multiple HTTP connections"
 <br>
 \- [RFC 6455](http://www.ietf.org/rfc/rfc2616.txt), <i>The WebSocket Protocol</i>
 
-!SLIDE smaller bullets incremental
-# Sounds promising, for a good reason
+!SLIDE center
+![HTML5 logo](html5.png)
 
 !SLIDE smaller bullets incremental
-# there is more than is
-# apparent to the eye
+# Excitement is justified
+# given long history of Ajax/Comet
 
 !SLIDE smaller bullets incremental
-# It is a popular term by now
-
-!SLIDE smaller bullets incremental
-# and has led to expectations
+# However expectations have come
 # ahead of experience
 
 !SLIDE smaller bullets incremental
-# False Expectations
+# A Few (False) Expectations
 
-* It's standard, it should work
-* It replaces Ajax/Comet [maybe even REST](http://www.infoq.com/news/2012/02/websockets-rest)
-* I know web apps, this can't be too different
-* I will program to WebSockets
+* It's standard, it's supported everywhere
+* It's a replacement for Ajax/Comet ([maybe even REST](http://www.infoq.com/news/2012/02/websockets-rest))
+* I know web apps, how different can this be?
+* I will program to a WebSocket API
 
 !SLIDE smaller bullets incremental
 # Reality Check
-
-* You need IE 10
+<br><br>
+* Not supported in IE < 10
 * There are issues with proxies
-* Event-driven, messaging architecture
 * Not a replacement for REST
-* Raw WebSocket very low level
-* IT'S A BIG SUBJECT!
+* A socket is very low level to work on
+* Event-driven, messaging architecture
 
 !SLIDE center
 # WebSockets
@@ -65,18 +61,18 @@ _"Toto, I've a feeling we're not in REST land any more"_
 
 !SLIDE smaller bullets incremental
 # Last year's talk
-## [On YouTube](http://www.youtube.com/watch?v=z-CYO1ABCp4)
-
+## [Available on YouTube](http://www.youtube.com/watch?v=z-CYO1ABCp4)
+<br><br><br>
 * Broad, pragmatic introduction
 * A survey of the land
 * Some key (open-ended) questions defined
 
 !SLIDE smaller bullets incremental
 # Key Takeaways from Last Year
-
+<br><br>
 * The need for fallback options will persist
-* Integrating into a real app not yet trivial
-* "Pure" WebSocket applications in the wild unlikely
+* Integrating into a real application not yet trivial
+* "Pure" WebSocket apps in the wild unlikely
 * Questions remain around usage patterns
 
 
